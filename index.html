@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Library Management System</title>
+</head>
+
+<body>
+    <header>
+        <div class="set-100">
+            <div class="set-50">
+                <a href="index.html" class="owl-image"> <img src="assets/image/owl.png" alt="Library Logo"
+                        class="logo-image" height="80" width="80">
+                </a>
+            </div>
+            <nav class="home-navbar">
+                <ul class="home-nav-list">
+
+                    <li><a href="viewbook.html">View Books</a></li>
+
+                    <li><a href="addbook.html">Add Book</a></li>
+
+                    <li><a href="issuebook.html">Issue Book</a></li>
+
+                    <li><a href="members.html">Members</a></li>
+
+                    <li><a href="returnbook.html">Return Book</a></li>
+
+                    <li><a href="read.html">Read Books</a></li>
+
+                    <li><a href="purchase.html">Purchase Books</a></li>
+
+                    <button id="themeToggle" onclick="toggleTheme()">
+                        🌙
+                    </button>
+
+                </ul>
+            </nav>
+            <div class="home-search">
+                <input type="text" placeholder="Search books..." class="search-input">
+                <button type="button" class="search-button">Search</button>
+            </div>
+            <div class="set-50">
+                <a href="cart.html"> <img src="assets/image/cart.png" alt="Cart" class="cart-image"> </a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <h2>Welcome to Library</h2>
+        <p>Manage Your Books and Library Members</p>
+        <section class="featured-books">
+            <h2>Featured Books</h2>
+            <div class="book-container" id = "homeBookList">
+            </div>
+
+
+            <p>Explore our collection of popular books</p>
+        </section>
+    </main>
+    <script src="assets/js/script.js"></script>
+    <script>
+    displayHomeBooks();
+</script>
+</body>
+
+</html>

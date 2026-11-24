@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <meta charset="UTF-8">
+    <title>Library Members</title>
+    <header>
+        <div class="set-100">
+            <div class="set-50">
+                <a href="index.html" class="owl-image"> <img src="assets/image/owl.png" alt="Library Logo"
+                        class="logo-image" height="80" width="80">
+                </a>
+            </div>
+            <nav class="home-navbar">
+                <ul class="home-nav-list">
+
+                    <li><a href="viewbook.html">View Books</a></li>
+
+                    <li><a href="addbook.html">Add Book</a></li>
+
+                    <li><a href="issuebook.html">Issue Book</a></li>
+
+                    <li class="active"><a href="members.html">Members</a></li>
+
+                    <li><a href="returnbook.html">Return Book</a></li>
+                    <li><a href="read.html">Read Books</a></li>
+
+                    <li><a href="purchase.html">Purchase Books</a></li>
+                    </li><button id="themeToggle" onclick="toggleTheme()">
+                        🌙
+                    </button>
+                </ul>
+            </nav>
+            <div class="home-search">
+                <input type="text" placeholder="Search books..." class="search-input">
+                <button type="button" class="search-button">Search</button>
+            </div>
+            <div class="set-50">
+                <a href="cart.html"> <img src="assets/image/cart.png" alt="Cart" class="cart-image"> </a>
+            </div>
+        </div>
+    </header>
+</head>
+
+<body>
+    <div class="member-buttons">
+        <button type="button" onclick="showMembers()">Members</button>
+
+        <button type="button" onclick="showAddMember()">Add Member</button>
+    </div>
+
+    <div id="membersSection" style="display: none;">
+
+        <table border="1" cellpadding="10">
+            <thead>
+                <tr>
+                    <th>Sr. No.</th>
+                    <th>Member Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+
+            <tbody id="memberList"></tbody>
+        </table>
+
+    </div>
+
+    <div id="memberForm" style="display: none;">
+
+        <h3>Add New Member</h3>
+
+        <label>Member Name:</label>
+        <input type="text" id="memberName">
+
+        <label>Email:</label>
+        <input type="email" id="memberEmail">
+
+        <label>Phone:</label>
+        <input type="tel" id="memberPhone">
+
+        <button type="button" onclick="saveMember()">Save Member</button>
+        <button type="button" onclick="showMembers()">View Members</button>
+    </div>
+   <div style="display: flex; justify-content: center; align-items: center;">
+    <a href="index.html" class="button-back-home">Back to Home</a>
+</div>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>

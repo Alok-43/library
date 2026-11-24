@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <meta charset="UTF-8">
+    <title>Issue Book</title>
+</head>
+<header>
+    <div class="set-100">
+        <div class="set-50">
+            <a href="index.html" class="owl-image"> <img src="assets/image/owl.png" alt="Library Logo"
+                    class="logo-image" height="80" width="80">
+            </a>
+        </div>
+        <nav class="home-navbar">
+            <ul class="home-nav-list">
+
+                <li><a href="viewbook.html">View Books</a></li>
+
+                <li><a href="addbook.html">Add Book</a></li>
+
+                <li class="active"><a href="issuebook.html">Issue Book</a></li>
+
+                <li><a href="members.html">Members</a></li>
+
+                <li><a href="returnbook.html">Return Book</a></li>
+                <li><a href="read.html">Read Books</a></li>
+
+                <li><a href="purchase.html">Purchase Books</a></li>
+                </li><button id="themeToggle" onclick="toggleTheme()">
+                    🌙
+                </button>
+            </ul>
+        </nav>
+        <div class="home-search">
+            <input type="text" placeholder="Search books..." class="search-input">
+            <button type="button" class="search-button">Search</button>
+        </div>
+        <div class="set-50">
+            <a href="cart.html"> <img src="assets/image/cart.png" alt="Cart" class="cart-image"> </a>
+        </div>
+    </div>
+</header>
+
+<body>
+
+    <form onsubmit="issueBook(); return false;">
+        <div class="issue-grid">
+
+            <div class="form-group">
+                <label>Member Name:</label>
+                <input type="text" id="memberName">
+            </div>
+
+            <div class="form-group">
+                <label>Book Name:</label>
+                <input type="text" id="bookName">
+            </div>
+
+            <div class="form-group">
+                <label>Issue Date:</label>
+                <input type="date" id="issueDate">
+            </div>
+<div class="form-group">
+    <label>Issue?:</label>
+    <input type="text" id="issueDetails" placeholder="Enter issue details">
+</div>
+           
+            <div class="form-group">
+                <label>Return Date:</label>
+                <input type="date" id="returnDate">
+            </div>
+
+        </div>
+
+        <button type="submit" class="issue-btn">Submit</button>
+
+    </form>
+    <button type = "button" onclick = "showIssuedBooks()"> view issued books
+    </button>
+    <div id = "issuedBooksSection" style= "display: none;">
+        <h2 >issued book details </h2>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>sr no.</th>
+                    <th>member name </th>
+                    <th>book name</th>
+                    <th> Issue date </th>
+                    <th> Issue </th>
+                    <th> Return Date</th>
+                </tr>
+            </thead>
+            <tbody id = "issuedBooksList"></tbody> 
+        </table>
+    </div>
+   <div style="display: flex; justify-content: center; align-items: center;">
+    <a href="index.html" class="button-back-home">Back to Home</a>
+</div>
+    <script src="assets/js/script.js"></script>
+</body>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Return Book</title>
+</head>
+<header>
+    <div class="set-100">
+        <div class="set-50">
+            <a href="index.html" class="owl-image"> <img src="assets/image/owl.png" alt="Library Logo"
+                    class="logo-image" height="80" width="80">
+            </a>
+        </div>
+        <nav class="home-navbar">
+            <ul class="home-nav-list">
+
+                <li><a href="viewbook.html">View Books</a></li>
+
+                <li><a href="addbook.html">Add Book</a></li>
+
+                <li><a href="issuebook.html">Issue Book</a></li>
+
+                <li><a href="members.html">Members</a></li>
+
+                <li class="active"><a href="returnbook.html">Return Book</a></li>
+                <li><a href="read.html">Read Books</a></li>
+
+                <li><a href="purchase.html">Purchase Books</a></li>
+                </li><button id="themeToggle" onclick="toggleTheme()">
+                    🌙
+                </button>
+            </ul>
+        </nav>
+        <div class="home-search">
+            <input type="text" placeholder="Search books..." class="search-input">
+            <button type="button" class="search-button">Search</button>
+        </div>
+        <div class="set-50">
+            <a href="cart.html"> <img src="assets/image/cart.png" alt="Cart" class="cart-image"> </a>
+        </div>
+    </div>
+</header>
+
+<body>
+    <form onsubmit="return false;">
+
+        <div class="return-grid">
+
+            <div class="form-group">
+                <label>Member Name:</label>
+                <input type="text" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label>Book Name:</label>
+                <input type="text" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label>Return Date:</label>
+                <input type="date" class="form-control" required>
+            </div>
+
+        </div>
+
+        <div class="return-submit">
+            <button type="submit">Return Book</button>
+        </div>
+
+    </form>
+    <div style="display: flex; justify-content: center; align-items: center;">
+    <a href="index.html" class="button-back-home">Back to Home</a>
+</div>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
